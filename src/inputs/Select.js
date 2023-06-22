@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import Select from 'react-select';
 import ComponentContainer from './ComponentContainer';
 // import './react-select.css';
@@ -11,7 +11,7 @@ function convertOptions({ options, optionValue, optionLabel, labelRenderer }) {
   return options.map(option => ({ ...option, value: option[optionValue], label: labelRenderer ? labelRenderer(option) : option[optionLabel] }));
 }
 
-class InputSelect extends PureComponent {
+class InputSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {};

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import Select from 'react-select/async';
 import ComponentContainer from './ComponentContainer';
 import AwesomeDebouncePromise from 'awesome-debounce-promise';
@@ -24,7 +24,7 @@ function promiseOptions({ inputValue, getOptions, params, isDisabled }) {
 // const searchAPIDebounced = _debounce(p => promiseOptions(p), 500);
 const searchAPIDebounced = AwesomeDebouncePromise(p => promiseOptions(p), 500);
 
-class SelectAsync extends PureComponent {
+class SelectAsync extends Component {
   constructor(props) {
     super(props);
     this.state = {
