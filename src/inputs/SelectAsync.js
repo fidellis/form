@@ -82,7 +82,7 @@ class SelectAsync extends PureComponent {
           value={this.state.value || ''}
           cacheOptions
           defaultOptions
-          //onChange={v => onChange({ ...v, id, value: v[optionValue] })}
+          onChange={v => onChange({ ...v, id, value: v[optionValue] })}
           styles={{ container: provided => ({ ...provided, ...style }), menu: provided => ({ ...provided, zIndex: 999 }) }}
         />
       </ComponentContainer>
